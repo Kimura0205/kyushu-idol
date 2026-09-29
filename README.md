@@ -1,0 +1,2 @@
+# kyushu-idol
+Ranking
