@@ -1,7 +1,7 @@
 *{box-sizing:border-box}
-:root{--bg:#f7f5f2;--card:#fff;--text:#222;--muted:#777;--line:#e7e2dc;--accent:#111}
+:root{--bg:#f7f5f2;--card:#fff;--text:#222;--muted:#777;--line:#e7e2dc;--accent:#111;--danger:#a33}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
-button{font:inherit}
+button,input{font:inherit}
 .app{max-width:980px;margin:0 auto;min-height:100vh;padding:42px 20px 28px;display:flex;flex-direction:column}
 header{text-align:center;margin-bottom:28px}.eyebrow{font-size:11px;letter-spacing:.2em;color:#999;margin:0 0 8px}
 h1{font-size:clamp(28px,6vw,48px);margin:0 0 10px;letter-spacing:.04em}
@@ -21,6 +21,17 @@ h2{font-size:clamp(24px,5vw,36px);margin:4px 0 8px}.result-note{color:#888;margi
 .ranking-list{list-style:none;padding:0;margin:0 auto 28px;max-width:650px;text-align:left}
 .ranking-list li{display:grid;grid-template-columns:48px 72px 1fr auto;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);padding:10px;border-radius:16px;margin-bottom:10px}
 .rank{font-weight:800;text-align:center;font-size:20px}.rank-photo{width:72px;height:72px;border-radius:12px;object-fit:cover}.rank-name{font-weight:700}.rank-score{font-size:12px;color:#888}
-.primary-button{border:0;border-radius:999px;background:#111;color:#fff;padding:14px 28px;cursor:pointer;font-weight:700}
-footer{text-align:center;color:#aaa;padding-top:30px}
-@media(max-width:620px){.app{padding:28px 12px}.vs-area{grid-template-columns:1fr 34px 1fr;gap:5px}.photo-wrap{border-radius:12px}.person-card span{font-size:14px}.vs{font-size:11px}.ranking-list li{grid-template-columns:34px 58px 1fr auto;gap:9px}.rank-photo{width:58px;height:58px}}
+.primary-button,.secondary-button,.danger-button{border:0;border-radius:999px;padding:14px 28px;cursor:pointer;font-weight:700}
+.primary-button{background:#111;color:#fff}.secondary-button{background:#e8e4df;color:#222}.danger-button{background:#f3dddd;color:var(--danger)}
+.manage-form{max-width:520px;margin:0 auto 22px;text-align:left;background:#fff;border:1px solid var(--line);padding:18px;border-radius:18px}
+.manage-form label{display:block;margin-bottom:14px}.manage-form label span{display:block;font-weight:700;font-size:13px;margin-bottom:7px}
+.manage-form input[type="text"],.manage-form input[type="file"]{width:100%;padding:12px;border:1px solid #d9d3cc;border-radius:10px;background:#fff}
+.manage-form .primary-button{width:100%}
+.manage-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.manager-list{max-width:650px;margin:0 auto;text-align:left}
+.manager-item{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);padding:8px;border-radius:14px;margin-bottom:8px}
+.manager-item img{width:56px;height:56px;border-radius:10px;object-fit:cover}.manager-name{font-weight:700}.delete-person{border:0;background:#f3dddd;color:var(--danger);border-radius:999px;padding:8px 12px;cursor:pointer}
+.storage-note{max-width:650px;margin:20px auto 0;color:#999;font-size:12px;line-height:1.7}
+footer{text-align:center;color:#aaa;padding-top:30px;display:flex;flex-direction:column;gap:8px}
+.manage-link{border:0;background:none;color:#777;text-decoration:underline;cursor:pointer;font-size:12px}
+@media(max-width:620px){.app{padding:28px 12px}.vs-area{grid-template-columns:1fr 34px 1fr;gap:5px}.photo-wrap{border-radius:12px}.person-card span{font-size:14px}.vs{font-size:11px}.ranking-list li{grid-template-columns:34px 58px 1fr auto;gap:9px}.rank-photo{width:58px;height:58px}.manage-item{grid-template-columns:48px 1fr auto}}

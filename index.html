@@ -44,10 +44,37 @@
       <ol id="rankingList" class="ranking-list"></ol>
       <button id="retryBtn" class="primary-button">もう一度遊ぶ</button>
     </section>
+
+    <section id="manageScreen" class="screen hidden">
+      <p class="eyebrow">MANAGE</p>
+      <h2>候補者を追加・管理</h2>
+      <p class="result-note">名前と写真を入れるだけで候補者を追加できます。</p>
+
+      <form id="addForm" class="manage-form">
+        <label>
+          <span>名前</span>
+          <input id="personName" type="text" maxlength="30" placeholder="例：ここな" required>
+        </label>
+        <label>
+          <span>写真</span>
+          <input id="personImage" type="file" accept="image/*" required>
+        </label>
+        <button class="primary-button" type="submit">候補者を追加</button>
+      </form>
+
+      <div class="manage-actions">
+        <button id="backBtn" class="secondary-button">ランキング画面に戻る</button>
+        <button id="resetPeopleBtn" class="danger-button">初期状態に戻す</button>
+      </div>
+
+      <div id="peopleManagerList" class="manager-list"></div>
+      <p class="storage-note">※追加した候補者は、このブラウザの保存領域に保存されます。他の人の端末には自動では反映されません。</p>
+    </section>
   </main>
 
   <footer>
-    <small>※ このサイトでは投票結果をブラウザ内でのみ集計しています。</small>
+    <button id="manageBtn" class="manage-link">⚙ 候補者を管理</button>
+    <small>※ 投票結果と候補者データは現在のブラウザ内で管理しています。</small>
   </footer>
 </div>
 <script src="script.js"></script>
