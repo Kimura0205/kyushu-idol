@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="写真を選んで作るランキング">
+<title>好き顔ランキング</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <p class="eyebrow">PHOTO RANKING</p>
+    <h1 id="siteTitle">好き顔ランキング</h1>
+    <p id="subtitle">あなたが好きな方を選んでください</p>
+  </header>
+
+  <main>
+    <section id="voteScreen" class="screen">
+      <div class="progress-wrap">
+        <div class="progress"><div id="progressBar"></div></div>
+        <span id="progressText">1 / 12</span>
+      </div>
+
+      <div class="vs-area">
+        <button class="person-card" id="leftCard" aria-label="左の写真を選択">
+          <div class="photo-wrap"><img id="leftImage" alt=""></div>
+          <span id="leftName"></span>
+        </button>
+        <div class="vs">VS</div>
+        <button class="person-card" id="rightCard" aria-label="右の写真を選択">
+          <div class="photo-wrap"><img id="rightImage" alt=""></div>
+          <span id="rightName"></span>
+        </button>
+      </div>
+
+      <button id="skipBtn" class="text-button">どちらも選ばない</button>
+    </section>
+
+    <section id="resultScreen" class="screen hidden">
+      <p class="eyebrow">RESULT</p>
+      <h2>あなたの好き顔ランキング</h2>
+      <p class="result-note">今回の比較結果をもとにした順位です</p>
+      <ol id="rankingList" class="ranking-list"></ol>
+      <button id="retryBtn" class="primary-button">もう一度遊ぶ</button>
+    </section>
+  </main>
+
+  <footer>
+    <small>※ このサイトでは投票結果をブラウザ内でのみ集計しています。</small>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
